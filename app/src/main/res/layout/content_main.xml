@@ -1,0 +1,1890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.chandu.indiaelearn.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- For Intro -->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_technology_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- A CardView that contains a TextView -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_gravity="top"
+                    android:layout_margin="15dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="10dp"
+                    card_view:contentPadding="8dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:src="@drawable/intro" />
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+            <!-- For Technology -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/technologyheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Technology"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/technologysection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/technologyheader"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/technology_image1"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop" />
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@+id/technology_image1"
+                                    android:gravity="center"
+                                    android:text="Digital Marketing"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_below="@+id/technology_image1"
+                                    android:layout_toRightOf="@+id/textView1"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view2"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/image2"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/image2"
+                                    android:gravity="center"
+                                    android:text="Blogging"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/image2"
+                                    android:layout_toRightOf="@+id/textView2"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_view3"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/image3"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/image3"
+                                    android:gravity="center"
+                                    android:text="Ethical Hacking"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/image3"
+                                    android:layout_toRightOf="@+id/textView3"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+            <!-- For Programming -->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_programming_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_technology_layout">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#80CBC4"
+                    android:alpha="0.5"
+                    />
+
+                <TextView
+                    android:id="@+id/programmingheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Programming"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/programmingsection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/programmingheader"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image1"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text1"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image1"
+                                    android:gravity="center"
+                                    android:text="CSS"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image1"
+                                    android:layout_toRightOf="@+id/programming_text1"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card2"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image2"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image2"
+                                    android:gravity="center"
+                                    android:text="HTML"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image2"
+                                    android:layout_toRightOf="@+id/programming_text2"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card3"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image3"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text3"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image3"
+                                    android:gravity="center"
+                                    android:text="Android"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image3"
+                                    android:layout_toRightOf="@+id/programming_text3"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card4"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image4"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text4"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image4"
+                                    android:gravity="center"
+                                    android:text="Python"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image4"
+                                    android:layout_toRightOf="@+id/programming_text4"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card5"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image5"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text5"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image5"
+                                    android:gravity="center"
+                                    android:text="Java Programming"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image5"
+                                    android:layout_toRightOf="@+id/programming_text5"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card6"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick=""
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image6"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text6"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image6"
+                                    android:gravity="center"
+                                    android:text="C Programming"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image6"
+                                    android:layout_toRightOf="@+id/programming_text6"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/programming_card7"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/programming_image7"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/programming_text7"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image7"
+                                    android:gravity="center"
+                                    android:text="C++ Programming"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/programming_image7"
+                                    android:layout_toRightOf="@+id/programming_text7"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+            <!-- For Add-->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_programming_layout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#1A237E" />
+
+                <TextView
+                    android:id="@+id/add_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Everyday Life Day by Day The Technology is Growing More and More.So Here You Can Learn the Things Changing the World"
+                    android:textColor="#ffffff" />
+
+
+            </RelativeLayout>
+            <!-- For Government -->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_government_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_technology_layout">
+
+                <TextView
+                    android:id="@+id/governmentheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Government"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/governmentsection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/governmentheader"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image1"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/government_text1"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image1"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="SBI PO EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image1"
+                                    android:layout_toRightOf="@+id/government_text1"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card2"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image2"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image2"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="SSC CGL EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image2"
+                                    android:layout_toRightOf="@+id/government_text2"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card3"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image3"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text3"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image3"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="RBI GRADE B EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image3"
+                                    android:layout_toRightOf="@+id/government_text3"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card4"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image4"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text4"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image4"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="INDIAN RAILWAYS EXAM"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image4"
+                                    android:layout_toRightOf="@+id/government_text4"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card5"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image5"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text5"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image5"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="LIC AAO EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image5"
+                                    android:layout_toRightOf="@+id/government_text5"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card6"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image6"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text6"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image6"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="IBPS SO EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image6"
+                                    android:layout_toRightOf="@+id/government_text6"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card7"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image7"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text7"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image7"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="IBPS CLERK EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image7"
+                                    android:layout_toRightOf="@+id/government_text7"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card8"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image8"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text8"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image8"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="SBI CLERK EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image8"
+                                    android:layout_toRightOf="@+id/government_text8"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card9"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image9"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text9"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image9"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="TET EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image9"
+                                    android:layout_toRightOf="@+id/government_text9"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/government_card10"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/government_image10"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp" />
+
+                                <TextView
+                                    android:id="@+id/government_text10"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image10"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="UPSC EXAM 2017"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/government_image10"
+                                    android:layout_toRightOf="@+id/government_text10"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+            <!-- For Entrepreneur-->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_entrepreneur_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_technology_layout">
+
+                <TextView
+                    android:id="@+id/entrepreneurheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Entrepreneur"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/entrepreneursection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/entrepreneurheader"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/entrepreneur_card1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/entrepreneur_image1"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/entrepreneur_text1"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/entrepreneur_image1"
+                                    android:gravity="center"
+                                    android:text="B-PLAN"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/entrepreneur_image1"
+                                    android:layout_toRightOf="@+id/entrepreneur_text1"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+            <!-- For UG-->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_ug_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_entrepreneur_layout">
+
+                <TextView
+                    android:id="@+id/ugheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Under Graduate Courses"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/ugsection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ugheader"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/ug_card1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/ug_image1"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/ug_text1"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image1"
+                                    android:gravity="center"
+                                    android:text="CSE"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image1"
+                                    android:layout_toRightOf="@+id/ug_text1"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/ug_card2"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/ug_image2"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/ug_text2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image2"
+                                    android:gravity="center"
+                                    android:text="ECE"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image2"
+                                    android:layout_toRightOf="@+id/ug_text2"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/ug_card3"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/ug_image3"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/ug_text3"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image3"
+                                    android:gravity="center"
+                                    android:text="MECHANICAL"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image3"
+                                    android:layout_toRightOf="@+id/ug_text3"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/ug_card4"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/ug_image4"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                     />
+
+                                <TextView
+                                    android:id="@+id/ug_text4"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image4"
+                                    android:gravity="center"
+                                    android:text="CIVIL"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/ug_image4"
+                                    android:layout_toRightOf="@+id/ug_text4"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+            <!-- For Designing-->
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/total_designing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_ug_layout">
+
+                <TextView
+                    android:id="@+id/designingheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Designing"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/designingsection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/designingheader"
+                    android:scrollIndicators="none"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image1"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text1"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image1"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Photoshop Speedart Misty Mountains-Photoshop CC"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image1"
+                                    android:layout_toRightOf="@+id/designing_text1"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card2"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image2"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image2"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="After Effects Motion Graphics Tutorial"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image2"
+                                    android:layout_toRightOf="@+id/designing_text2"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card3"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image3"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text3"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image3"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="After Effects Liquid Motion Tutorial"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image3"
+                                    android:layout_toRightOf="@+id/designing_text3"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card4"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image4"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text4"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image4"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="After Effects Medical and Documentary Style Animation"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image4"
+                                    android:layout_toRightOf="@+id/designing_text4"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card5"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image5"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text5"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image5"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="After Effects For Photo and Video Slide Shows"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image5"
+                                    android:layout_toRightOf="@+id/designing_text5"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card6"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image6"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text6"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image6"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="After Effects Animated Font Tutorial"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image6"
+                                    android:layout_toRightOf="@+id/designing_text6"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card7"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image7"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text7"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image7"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Horror Titles in After Effects"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image7"
+                                    android:layout_toRightOf="@+id/designing_text7"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card8"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image8"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text8"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image8"
+                                    android:gravity="center"
+                                    android:text="Fire Particles After Effects Tutorial"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image8"
+                                    android:layout_toRightOf="@+id/designing_text8"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card9"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image9"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text9"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image9"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Clean Parallax Sildeshow Tutorial After Effects"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image9"
+                                    android:layout_toRightOf="@+id/designing_text9"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/designing_card10"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:onClick="opendetail"
+                            card_view:cardCornerRadius="2dp"
+                            card_view:cardElevation="10dp"
+                            card_view:contentPadding="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
+
+                                <ImageView
+                                    android:id="@+id/designing_image10"
+                                    android:layout_width="190dp"
+                                    android:layout_height="130dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/tech" />
+
+                                <TextView
+                                    android:id="@+id/designing_text10"
+                                    android:layout_width="130dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image10"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="After Effects Plexus Tutorial"
+                                    android:textColor="#000000" />
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/designing_image10"
+                                    android:layout_toRightOf="@+id/designing_text10"
+                                    android:onClick="showPopup"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</ScrollView>
